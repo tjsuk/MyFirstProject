@@ -1,14 +1,14 @@
 void main() {
-        // System.out.println("Hello, World!");
+    // System.out.println("Hello, World!");
 
-        byte age = 21;
-        byte maxValue = Byte.MAX_VALUE;
+    // byte age = 21;
+    // byte maxValue = Byte.MAX_VALUE;
 
-        //System.out.println(maxValue);
+    //System.out.println(maxValue);
 
-        maxValue = (byte)(maxValue + 1);
+    // maxValue = (byte)(maxValue + 1);
 
-        //System.out.println(maxValue);
+    //System.out.println(maxValue);
 
         /*
         short sAge = age;
@@ -177,5 +177,208 @@ void main() {
 
         IO.println(false^true);
 
-         */
+
+
+        // Lesson 9
+
+        String choice = "2";
+
+        if (choice.equals("1")) {
+                IO.println("You chose 1");
+                choice = null;
+        }
+        else if (choice.equals("2")) {
+                IO.println("You chose 2");
+        }
+        else if (choice.equals("3")) {
+                IO.println("You chose 3");
+        }
+        else {
+                IO.println("You chose something else");
+        }
+
+
+        String username = "Admin";
+        String password = "password";
+
+        if (username.equals("Admin")){
+                IO.println("username correct.");
+                if (password.equals("Password")){
+                        IO.println("Username and Password correct.");
+                }
+                else {
+                        IO.println("Password incorrect.");
+                }
+        }
+        else {
+                IO.println("Access denied.");
+        }
+
+        String username = "AdMiN".toLowerCase();  // admin
+        String password = "Password";
+
+        if (username.equals("admin".toLowerCase()) && password.equals("Password")) {
+                IO.println("Access granted.");
+        } else {
+                IO.println("Access denied.");
+        }
+
+
+
+        // Using AND &&
+        byte age = 18;
+        boolean hasID = true;
+
+        boolean isAdult = age >= 18;
+
+        boolean enterNightClub = isAdult && hasID;
+
+        boolean a = true;
+        boolean b = false;
+
+        // Use NAND
+        boolean c = !(a && b); // do not use !a && b;
+
+        // OR ||
+        c = a || b;
+
+        // NOR
+        c = !(a || b);
+
+        // BUFFER
+        c = a;
+        c = b;
+
+        // NOT
+        c = !a;
+        c = !b;
+
+        // XOR
+        // a = false;
+        c = a ^ b;
+
+        // XNOR
+        c = !(a ^ b);
+
+
+
+        // Lesson 10 Switch
+
+        int x = 4;
+
+        switch (x) {
+                case 1:
+                        IO.println("x is 1");
+                        break;
+                case 2:
+                        IO.println("x is 2");
+                        break;
+                default:
+                        IO.println("x is not 1 or 2");
+        }
+
+        String day = "Monday".toLowerCase();
+
+        switch (day) {
+                case "monday":
+                        IO.println("It's Monday");
+                        break;
+
+                case "tuesday":
+                        IO.println("It's Tuesday");
+                        break;
+
+                case "wednesday":
+                        IO.println("It's Wednesday");
+                        break;
+
+                default:
+                        IO.println("It's not Monday, Tuesday or Wednesday");
+
+        }
+
+        byte level = 1;
+
+        switch (level){
+                case 1:
+                        IO.println("Level 1");
+                case 2:
+                        IO.println("Level 2");
+                        break;
+                case 3:
+                        IO.println("Level 3");
+                        break;
+                default:
+                        IO.println("Level not recognised");
+        }
+
+        String role = "superuser".toUpperCase();
+
+        switch (role) {
+                case "SUPERUSER":
+                        IO.println("You can do anything");
+                case "ADMIN":
+                        IO.println("You can only do admin stuff");
+                case "USER":
+                        IO.println("You can only do user stuff");
+                        break;
+                default:
+                        IO.println("You are not allowed to do anything");
+        }
+
+
+        int option = 1;
+
+        String pet = switch(option){
+                case 1 -> "Dog";
+                case 2 -> "Cat";
+                case 3 -> "Bird";
+                default -> "Unknown";
+        };
+
+        IO.println(pet);
+
+        // Taking an input
+
+        Scanner reader = new Scanner(System.in);
+        IO.print("Enter your first name: ");
+        String firstName = reader.nextLine().trim().strip().toUpperCase();
+        IO.println("First Name is " + firstName + ".");
+        IO.print("Enter your age: ");
+        byte age = reader.nextByte();
+        age++;
+        IO.println("Age next year is " + age + ".");
+
+
+
+        for (int i = 0; i < 10; i+=3) {
+            IO.println(i);
+        }
+
+
+
+    // While Loop
+        Scanner reader = new Scanner(System.in);
+        IO.print("Enter your first name: ");
+        String firstName = reader.nextLine();
+        while (firstName.isEmpty()) {
+            IO.print("Enter your first name: ");
+            firstName = reader.nextLine();
+        }
+
+        IO.println("Hello " + firstName + "!");
+
+
+
+        Scanner reader = new Scanner(System.in);
+        String firstName = "";
+
+        do {
+            IO.print("Enter your first name: ");
+            firstName = reader.nextLine();
+        } while (firstName.isEmpty());
+
+        IO.println("Hello " + firstName + "!");
+
+        */
 }
