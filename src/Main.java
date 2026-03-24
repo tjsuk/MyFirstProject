@@ -1,14 +1,15 @@
-void main() {
-    // System.out.println("Hello, World!");
+class Main {
+    void main() {
+        // System.out.println("Hello, World!");
 
-    // byte age = 21;
-    // byte maxValue = Byte.MAX_VALUE;
+        // byte age = 21;
+        // byte maxValue = Byte.MAX_VALUE;
 
-    //System.out.println(maxValue);
+        //System.out.println(maxValue);
 
-    // maxValue = (byte)(maxValue + 1);
+        // maxValue = (byte)(maxValue + 1);
 
-    //System.out.println(maxValue);
+        //System.out.println(maxValue);
 
         /*
         short sAge = age;
@@ -380,5 +381,139 @@ void main() {
 
         IO.println("Hello " + firstName + "!");
 
-        */
+
+    // Lesson 12
+
+    int[] numbers = new int[10];
+    int[] numbers1 = new int[]{1,2,3,4,5,6,7,8,9,10};
+    int[] numbers2 = {1,2,3,4,5,6,7,8,9,10};
+
+
+
+    //IO.println(numbers[0]);
+    for (int i = 0; i < numbers.length; i++) {
+        numbers[i] = i + 1;
+    }
+
+    for (int i = 0; i < numbers.length; i++) {
+        IO.print(numbers[i]+" ");
+    }
+
+    IO.println();
+
+    String[] names = {"John", "Jane", "Bob", "Alice"};
+    String[] copyOfNames = names.clone();
+
+    for (int i = 0; i < names.length; i++) {
+        IO.println("a. " + names[i]);
+    }
+
+    for (String name : names) {
+        IO.println("b. " + name);
+    }
+
+    copyOfNames[0] = "Fred";
+
+    IO.println("==========================");
+    for (int i = 0; i < copyOfNames.length; i++) {
+        IO.println(copyOfNames[i]);
+    }
+
+    IO.println("==========================");
+    Arrays.sort(copyOfNames);
+    for (int i = 0; i < copyOfNames.length; i++) {
+        IO.println(copyOfNames[i]);
+    }
+
+    IO.println(copyOfNames[copyOfNames.length]);
+
+
+
+    // Lesson 13 Multidimensional Arrays
+
+    int[][] matrix = new int[3][3];
+
+    int[][] grid = new int[3][4];
+    int[][] ratings = {
+            {4,5,3},
+            {2,1,5},
+            {5,5,4}
+    };
+
+    IO.println(ratings[1][2]);
+
+    for (int i = 0; i < ratings.length; i++) {
+        for (int j = 0; j < ratings[i].length; j++){
+            IO.print(ratings[i][j] + " ");
+        }
+    }
+
+    IO.println();
+
+    for (int[] row : ratings) {
+        for (int cell : row) {
+            IO.print(cell + " ");
+        }
+    }
+
+    ratings[2][2] = 42;
+
+    ratings[1] = new int[] {1,2,3};
+
+    IO.println();
+
+    for (int[] row : ratings) {
+        for (int cell : row) {
+            IO.print(cell + " ");
+        }
+    }
+
+    int[][] backUpOfRatings = ratings.clone();
+
+    // Jagged array
+    int[][] jagged1 = new int[][] {
+            {1,2,3},
+            {4,5,6,7},
+            {8,9}
+    };
+
+    int[][] jagged2 = new int[3][];
+    jagged2[0] = new int[3];
+    jagged2[1] = new int[]{4,5,6,7};
+    jagged2[2] = new int[2];
+
+    jagged2[1] = new int[]{1,2,3,4,5,6,7};
+
+    ArrayList<String> pets = new ArrayList<>();
+    pets.add("Dog");
+    pets.add("Cat");
+    pets.add("Bird");
+    pets.add("Fish");
+    pets.add("Rabbit");
+    pets.add("Snake");
+    pets.add("Lizard");
+    pets.add("Turtle");
+    pets.add("Horse");
+    pets.add("Goat");
+    pets.add("Cow");
+
+    IO.println(pets);
+
+    for (int i = 0; i < pets.size(); i++) {
+        IO.print(pets.get(i));
+    }
+
+    IO.println();
+
+    for (String pet : pets) {
+        IO.println(pet);
+    }
+
+    pets.remove(2);
+    pets.remove("Dog");
+
+    IO.println(pets.get(1));
+
+     */
+    }
 }
